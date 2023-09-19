@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="slide.css"> <!-- You can link to your stylesheet here if needed -->
+    <link rel="stylesheet" href="parallax.css"> <!-- You can link to your stylesheet here if needed -->
+    <link rel='stylesheet' type='text/css' href="style.css">
+    <title>Slide Page</title>
+</head>
+
+<body id="wrapper">
+    <div id="back">
+        <div class="backRight">
+            <div class="noise"></div>
+            <div class="wrapper">
+                <div id="layer-1" class="art">
+                    <div id="door_1" class="door"></div>
+                    <div class="door-shadow"></div>
+                    <div class="door-shadow-2"></div>
+                    <div id="door_2" class="door"></div>
+                    <div class="gradient-1"></div>
+                    <div class="gradient-2"></div>
+                    <div id="layer-3" class="round">
+                    </div>
+                </div>
+                <div class="container" id="layer-4">
+                    <div class='card'>
+                        <div class='lines'></div>
+                        <div class='imgBx'>
+                            <img src='develop.png'>
+                        </div>
+                        <div class='content'>
+                            <div class='details'>
+                                <h2>Development</h2>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consecteutr adipisicing elit. Paritur eaque iste
+                                    quaerat volutatem nemo quo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <img src="https://cdn.discordapp.com/attachments/215765926392496128/518043029630615552/fallingman.png"
+                    class="man" id="layer-4" alt="Falling Man"> -->
+            </div>
+        </div>
+        <div class="backLeft">
+
+        </div>
+    </div>
+
+    <div id="slideBox">
+        <div class="topLayer">
+            <div class="left">
+                <div class="container">
+                    <div class='box'>
+                        <form>
+                            <h2>Sign in</h2>
+                            <input type='text' placeholder="Username">
+                            <input type='password' placeholder="Password">
+                            <input type='submit' value="login">
+                            <div class='group'>
+                                <a herf='#'>Forget Password</a>
+                                <a herf='#'>Sign up</a>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- <h2>Sign Up</h2>
+                    <form method="post" onsubmit="return false;">
+                        <div class="form-group">
+                            <input type="text" placeholder="username" />
+                        </div>
+                        <div class="form-group"></div>
+                        <div class="form-group"></div>
+                        <div class="form-group"></div>
+                    </form>
+                    <button id="goLeft" class="off">Login</button>
+                    <button>Sign up</button> -->
+                </div>
+            </div>
+            <div class="right">
+                <div class="content-slide">
+                    <h2>Login</h2>
+                    <form method="post" onsubmit="return false;">
+                        <div class="form-group">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" />
+                        </div>
+                        <button id="goRight" class="off">Sign Up</button>
+                        <button id="login" type="submit">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.onload = function () {
+            var wrapper = document.querySelector('#wrapper'),
+                layerOne = document.querySelector('#layer-1'),
+                layerTwo = document.querySelector('#layer-2'),
+                layerThree = document.querySelector('#layer-3'),
+                layerFour = document.querySelector('#layer-4');
+
+            wrapper.addEventListener('mousemove', function (e) {
+                var pageX = e.clientX - window.innerWidth / 2,
+                    pageY = e.clientY - window.innerHeight / 2;
+                layerOne.style.transform = 'translateX(-' + (50 + pageX / 200) + '%) translateY(-' + (50 + pageY / 200) + '%)';
+                layerTwo.style.transform = 'translateX(-' + (50 + pageX / 1000) + '%) translateY(-' + (50 + pageY / 1000) + '%)';
+                layerThree.style.transform = 'translateX(-' + (50 + pageX / 200) + '%) translateY(-' + (50 + pageY / 200) + '%)';
+                layerFour.style.transform = 'translateX(-' + (50 + pageX / 25) + '%) translateY(-' + (50 + pageY / 25) + '%)';
+            });
+        }
+    </script>
+    <!-- Include your JavaScript code here -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Include jQuery library -->
+    <script>
+        $(document).ready(function () {
+            $('#goRight').on('click', function () {
+                $('#slideBox').animate({
+                    'marginLeft': '0'
+                });
+                $('.topLayer').animate({
+                    'marginLeft': '100%'
+                });
+            });
+            $('#goLeft').on('click', function () {
+                $('#slideBox').animate({
+                    'marginLeft': '50%'
+                });
+                $('.topLayer').animate({
+                    'marginLeft': '0'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
