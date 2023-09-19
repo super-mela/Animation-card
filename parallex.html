@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="parallax.css"> <!-- You can link to your stylesheet here if needed -->
+    <title>Parallax Page</title>
+</head>
+
+<body id="wrapper">
+    <div class="wrapper">
+        <div id="layer-1" class="art">
+            <div class="noise"></div>
+            <!-- <div id="layer-2" class="texts">
+                <span id="text_1">一生懸命働く</span>
+                <span id="text_2">@Craaftx1</span>
+                <span id="text_3">216</span>
+                <span id="text_4">かもしれない</span>
+                <span id="text_5">ポスターを毎日作る</span>
+                <span id="text_6">マジディエルロペス © 2017</span>
+            </div> -->
+            <div id="door_1" class="door"></div>
+            <div class="door-shadow"></div>
+            <div class="door-shadow-2"></div>
+            <div id="door_2" class="door"></div>
+            <div class="gradient-1"></div>
+            <div class="gradient-2"></div>
+            <div id="layer-3" class="round">
+                <!-- <div class="textbox">
+                    <span id="text_6">儿ーピング</span>
+                    <h1 id="text_7" class="clip-text" data-text="作業">作業</h1>
+                    <h1 id="text_8" class="clip-text">作業</h1>
+                </div> -->
+            </div>
+        </div>
+        <img src="https://cdn.discordapp.com/attachments/215765926392496128/518043029630615552/fallingman.png"
+            class="man" id="layer-4" alt="Falling Man">
+    </div>
+    <script>
+        window.onload = function () {
+            var wrapper = document.querySelector('#wrapper'),
+                layerOne = document.querySelector('#layer-1'),
+                layerTwo = document.querySelector('#layer-2'),
+                layerThree = document.querySelector('#layer-3'),
+                layerFour = document.querySelector('#layer-4');
+
+            wrapper.addEventListener('mousemove', function (e) {
+                var pageX = e.clientX - window.innerWidth / 2,
+                    pageY = e.clientY - window.innerHeight / 2;
+                layerOne.style.transform = 'translateX(-' + (50 + pageX / 200) + '%) translateY(-' + (50 + pageY / 200) + '%)';
+                layerTwo.style.transform = 'translateX(-' + (50 + pageX / 1000) + '%) translateY(-' + (50 + pageY / 1000) + '%)';
+                layerThree.style.transform = 'translateX(-' + (50 + pageX / 200) + '%) translateY(-' + (50 + pageY / 200) + '%)';
+                layerFour.style.transform = 'translateX(-' + (50 + pageX / 25) + '%) translateY(-' + (50 + pageY / 25) + '%)';
+            });
+        }
+    </script>
+</body>
+
+</html>
