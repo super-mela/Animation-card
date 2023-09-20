@@ -91,8 +91,8 @@
         <div class="topLayer">
             <div class="left">
                 <div class="form-container">
-                    <div class="ear ear--left"></div>
-                    <div class="ear ear--right"></div>
+                    <!-- <div class="ear ear--left"></div>
+                    <div class="ear ear--right"></div> -->
                     <div class="face">
                         <div class="eyes">
                             <div class="eye eye--left">
@@ -157,9 +157,24 @@
                         </div>
                     </div>
                     <!-- SVG Image End -->
+                    <div class='box'>
+                        <form>
+                            <h2>Sign in</h2>
 
+                            <!-- <div class="fas fa-user"></div> -->
+                            <input class="username" type="text" autocomplete="on" placeholder="Username" />
+                            <!-- <input class="username" type="text" autocomplete="on" placeholder="Username" /> -->
+                            <input class="password" type="password" autocomplete="off" placeholder="password" />
+                            <button class="password-button" type='button'>show</button>
+                            <input type='submit' value="login">
+                            <div class='group'>
+                                <a herf='#'>Forget Password?</a>
+                                <!-- <a id="goRight" href='#'>Sign up</a> -->
+                            </div>
+                        </form>
+                    </div>
                     <!-- Form Start -->
-                    <div class="tengah">
+                    <!-- <div class="tengah">
                         <div class="login">
                             <label>
                                 <div class="fas fa-user"></div>
@@ -172,7 +187,7 @@
                             </label>
                             <button class="login-button">sign in</button>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- Form End -->
 
@@ -211,18 +226,26 @@
                 </div> -->
             </div>
             <div class="right">
-                <div class="container">
-                    <div class='box'>
+                <!-- <div class="noise"></div> -->
+                <div class="form-container form-bg">
+                    <div class='box box-form '>
                         <form>
-                            <h2>Sign in</h2>
-                            <input type='text' placeholder="Username">
+                            <h2>Sign Up</h2>
+                            <input type='text' placeholder="Name">
+                            <input type='email' placeholder="Email">
                             <input type='password' placeholder="Password">
-                            <input type='submit' value="login">
-                            <div class='group'>
-                                <a herf='#'>Forget Password</a>
-                                <a id="goRight">Sign up</a>
-                            </div>
+                            <input type='text' placeholder="User Type">
+                            <input type='text' placeholder="Gender">
+                            <input type='text' placeholder="Country">
+                            <input type='submit' value="Signup">
                         </form>
+                    </div>
+                    <!-- Footer Start  -->
+                    <div class="footer">
+                        <p>
+                            Already have an account?
+                            <a class="footer-a" id="goRight">Login</a>
+                        </p>
                     </div>
                 </div>
                 <!-- <div class="content-slide">

@@ -1,4 +1,4 @@
-/* --- Colors --- */
+/* --- Coloouns --- */
 :root {
     --color-background: #C5CAE9;
     --color-art: #08263e;
@@ -232,6 +232,9 @@ img {
     height: 420px;
     border-radius: 50%;
     background: var(--gradient-round);
+    background-image: url('/africa.png');
+    background-size: cover;
+    /* Add this line */
     box-shadow: 0 7px 14px rgba(0, 0, 0, 0.10), 0 10px 10px rgba(211, 18, 150, 0.22);
 }
 
